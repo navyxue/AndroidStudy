@@ -1,0 +1,41 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion COMPILE_SDK_VERSION as int
+
+    defaultConfig {
+        minSdkVersion MIN_SDK_VERSION as int
+        targetSdkVersion TARGET_SDK_VERSION as int
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+androidExtensions {
+    experimental = true
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    api "com.android.support:appcompat-v7:${SUPPORT_LIB_VERSION}"
+    api "com.android.support:exifinterface:${SUPPORT_LIB_VERSION}"
+    api 'com.squareup.okhttp3:okhttp:3.10.0'
+    api 'com.google.code.gson:gson:2.8.5'
+    api 'com.qiniu:qiniu-android-sdk:7.3.3' // 这个是依赖第三方   api意思：所有model 都能访问到，implementation意思：当前model能访问到，ok
+    api 'org.litepal.android:kotlin:2.1.0'
+//    api 'com.github.bumptech.glide:glide:4.9.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    api files('libs/commons-io-2.4.jar')
+}

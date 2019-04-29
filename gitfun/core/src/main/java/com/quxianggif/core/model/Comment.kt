@@ -1,0 +1,35 @@
+package com.quxianggif.core.model
+
+import com.google.gson.annotations.SerializedName
+
+/**
+ * Comment实体类，用于存储服务器返回的评论数据
+ */
+class Comment : Model() {
+    override val modelId: Long
+        get() = commentId
+
+    @SerializedName("comment_id")
+    var commentId = 0L
+
+    var content = ""
+
+    @SerializedName("user_id")
+    var userId = 0L
+
+    var nickname = ""
+
+    var avatar = ""
+
+    @SerializedName("bg_image")
+    var bgImage = ""
+
+    @SerializedName("post_date")
+    var postDate = 0L
+
+    @SerializedName("goods_count")
+    var goodsCount = 0
+
+    @SerializedName("good_already")
+    var isGoodAlready = false
+}
