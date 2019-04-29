@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+    <ImageView
+        android:id="@+id/fruit_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/fruit_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
+    <!--
+        layout_gravity使控件在布局中居中显示，center_horizontal在android:orientation="vertical"时起作用，
+        center_vertical在android:orientation="horizontal"时起作用。
+        Android新版本中android:layout_gravity="center"会根据android:orientation的值来使控件自动匹配是水平居中还是垂直居中
+     -->
+
+</LinearLayout>
