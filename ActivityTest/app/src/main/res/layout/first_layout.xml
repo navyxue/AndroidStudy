@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--
+        android:layout_width=match_parent：表示当前元素和父元素一样宽
+        android:layout_height=wrap_content：表示当前元素的高度只要能包含里面的内容就行
+     -->
+    <Button
+        android:id="@+id/button_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Button 1"/>
+    <Button
+        android:id="@+id/button1_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="@string/destoryActivyBtnName"/>
+</LinearLayout>

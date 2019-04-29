@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">This is FirstActivity</string>
+    <string name="destoryActivyBtnName">销毁Activity</string>
+</resources>
